@@ -1,6 +1,5 @@
 #create dict
 students = {}
-#
 while True:
     student = input('enter students : ').split()
     if student[0]=='end':break
