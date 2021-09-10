@@ -1,6 +1,4 @@
-a=2
-b=3
-f=int("3")
-c=a**b
-d=c-f
-print(d)
+numbers=[int(number) for number in input("enter numbers: ").split()]
+sum=print("sum is :",sum(numbers))
+maximum=print("max is :",max(numbers))
+minimum=print("min is :",min(numbers))
