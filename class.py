@@ -7,6 +7,8 @@ class Point:
         return math.sqrt((self.x-point.x)**2 + (self.y-point.y)**2)
     def __sub__(self,point):
         return Point(self.x-point.x,self.y-point.y)
+    def __add__(self,point):
+        return Point(self.x+point.x,self.y+point.y)
     def __str__(self):
         return f"({self.x},{self.y})"
 class Circle:
@@ -21,4 +23,4 @@ print(circle1.area())
 #
 p1=Point(3,4)
 p2=Point(12,1)
-print(p1-p2)
+print(p1+p2)
