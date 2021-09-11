@@ -11,8 +11,6 @@ class Circle:
         self.__radius = r
     def area(self):
         return (self.__radius**2)*3.14
-    
 #    
-
 circle1 = Circle(Point(1,4),2)
 print(circle1.area())
