@@ -7,10 +7,11 @@ class Point:
         return math.sqrt((self.x-point.x)**2 + (self.y-point.y)**2)
 class Circle:
     def __init__(self,center:Point,r:int) :
-        self.center = center
-        self.radius = r
+        self.__center = center
+        self.__radius = r
     def area(self):
-        return (self.radius**2)*3.14
+        return (self.__radius**2)*3.14
+    
 #    
 
 circle1 = Circle(Point(1,4),2)
