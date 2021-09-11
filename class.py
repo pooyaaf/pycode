@@ -1,13 +1,17 @@
-class person:
-    #constructor
-    def __init__(self,name) :
-        self.name=name  #attribute
-        self.balance = 0
-    def add(self,amount:int): #method
-        self.balance += amount
+import math
+class Point:
+    def __init__(self,x:int,y:int) :
+        self.x=x
+        self.y=y
+    def dist(self,point):
+        return math.sqrt((self.x-point.x)**2 + (self.y-point.y)**2)
+class Circle:
+    def __init__(self,center:Point,r:int) :
+        self.center = center
+        self.radius = r
+    def area(self):
+        return (self.radius**2)*3.14
+#    
 
-
-#object
-person1 = person("ali") #instantiate
-person2 = person("mohammad")
-print(person1.name,person2.name)
+circle1 = Circle(Point(1,4),2)
+print(circle1.area())
