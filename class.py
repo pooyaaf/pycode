@@ -5,6 +5,8 @@ class Point:
         self.y=y
     def dist(self,point):
         return math.sqrt((self.x-point.x)**2 + (self.y-point.y)**2)
+    def __sub__(self,point):
+        return Point(self.x-point.x,self.y-point.y)
     def __str__(self):
         return f"({self.x},{self.y})"
 class Circle:
@@ -17,4 +19,6 @@ class Circle:
 circle1 = Circle(Point(1,4),2)
 print(circle1.area())
 #
-print 
+p1=Point(3,4)
+p2=Point(12,1)
+print(p1-p2)
