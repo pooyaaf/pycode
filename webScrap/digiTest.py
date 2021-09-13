@@ -2,8 +2,8 @@ from urllib.request import urlopen
 from bs4 import BeautifulSoup
 for i in range(30):
     with urlopen(f"https://www.digikala.com/search/category-mobile-phone/?has_selling_stock=1&pageno={i+1}") as response:
-        html=response.read().decode("utf-8") #1- request
-        soup=BeautifulSoup(html,"html.parser") #2 - parse
+        html=response.read().decode("utf-8") #1- request to url
+        soup=BeautifulSoup(html,"html.parser") #2 - parse html
         mobiles=soup.find_all("div",{"class":"c-product-box__content"})
         for mobile in mobiles:
             try:
